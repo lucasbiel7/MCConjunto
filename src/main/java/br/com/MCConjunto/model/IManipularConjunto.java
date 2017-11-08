@@ -5,8 +5,6 @@
  */
 package br.com.MCConjunto.model;
 
-import java.util.Set;
-
 /**
  *
  * @author lucas
@@ -16,7 +14,7 @@ import java.util.Set;
 public interface IManipularConjunto<Entidade extends Object> {
     
     boolean compararConjunto(Conjunto<Entidade> primeiroConjunto,Conjunto<Entidade> segundoConjunto);
-    Set<Conjunto<Entidade>> conjuntoPotencia(Conjunto<Entidade> primeiroCojunto,Conjunto<Entidade> segundoConjunto);
+    Conjunto<Conjunto<Entidade>> conjuntoPotencia(Conjunto<Entidade> primeiroCojunto,Conjunto<Entidade> segundoConjunto);
     boolean perteceAoConjunto(Conjunto<Entidade> conjunto,Entidade elemento);
     Conjunto<Entidade> conjuntoUniao(Conjunto<Entidade> primeiroConjunto,Conjunto<Entidade> segundoConjunto);
     Conjunto<Entidade> conjuntoIntersecao(Conjunto<Entidade> primeiroConjunto,Conjunto<Entidade> segundoConjunto);
