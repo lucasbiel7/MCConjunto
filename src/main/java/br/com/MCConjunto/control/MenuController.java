@@ -7,8 +7,6 @@ package br.com.MCConjunto.control;
 
 import br.com.MCConjunto.model.Conjunto;
 import br.com.MCConjunto.model.GerenciadorDeJanela;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
