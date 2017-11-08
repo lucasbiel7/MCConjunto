@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -35,7 +36,14 @@ public class MenuController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        listaDeConjuntos=new ArrayList<>();
+        Platform.runLater(()->{
+            if(apPrincipal.getUserData() instanceof List){
+                listaDeConjuntos=(List<Conjunto<String>>) apPrincipal.getUserData();
+            }
+        });
+        if(listaDeConjuntos==null){
+            listaDeConjuntos=new ArrayList<>();
+        }
     }
     
     @FXML
