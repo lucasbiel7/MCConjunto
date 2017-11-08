@@ -5,11 +5,17 @@
  */
 package br.com.MCConjunto.control;
 
+import br.com.MCConjunto.model.GerenciadorDeJanela;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -25,8 +31,6 @@ public class MenuController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-            // TODO
         
     }    
-    
 }
