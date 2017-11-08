@@ -6,6 +6,9 @@
 package br.com.MCConjunto.control;
 
 import br.com.MCConjunto.model.Conjunto;
+import br.com.MCConjunto.model.GerenciadorDeJanela;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +16,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -37,16 +42,31 @@ public class MenuController implements Initializable {
     
     @FXML
     public void btAdicionarConjunto(ActionEvent ae){
-        
+        try{
+            GerenciadorDeJanela gerenciadorDeJanela=new GerenciadorDeJanela(apPrincipal.getScene());
+            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("AdicionarConjunto",listaDeConjuntos));
+        }catch(Exception e){
+            new Alert(Alert.AlertType.ERROR, "Módulo ainda não foi construido", ButtonType.OK).showAndWait();
+        }
     }
     
     @FXML
     private void btCarregarConjuntos(ActionEvent ae){
-        
+        try{
+            GerenciadorDeJanela gerenciadorDeJanela=new GerenciadorDeJanela(apPrincipal.getScene());
+            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("CarregarConjunto",listaDeConjuntos));
+        }catch(Exception e){
+            new Alert(Alert.AlertType.ERROR, "Módulo ainda não foi construido", ButtonType.OK).showAndWait();
+        }
     }
     
     @FXML
     private void btManipularConjuntos(ActionEvent ae){
-        
+        try{
+            GerenciadorDeJanela gerenciadorDeJanela=new GerenciadorDeJanela(apPrincipal.getScene());
+            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("ManipularConjunto",listaDeConjuntos));
+        }catch(Exception e){
+            new Alert(Alert.AlertType.ERROR, "Módulo ainda não foi construido", ButtonType.OK).showAndWait();
+        }
     }
 }

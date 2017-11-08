@@ -6,6 +6,7 @@
 package br.com.MCConjunto.model;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -35,13 +36,25 @@ public class GerenciadorDeJanela {
         return primaryStage;
     }
     
-    public void trocarCena(Parent parent){
-        scene.setRoot(parent);
+    public void trocarCena(Parent parent) {
+        if(parent!=null){
+            scene.setRoot(parent);
+        }
     }
     
-    public Parent carregarComponente(String tela) throws IOException{
-        return FXMLLoader.load(getClass().getResource(PACOTE_VIEW+""+tela+".fxml")); 
+    public Parent carregarComponente(String tela) {
+        try{
+            return FXMLLoader.load(getClass().getResource(PACOTE_VIEW+""+tela+".fxml")); 
+        }catch(IOException e){
+            return null;
+        }
     }
     
-    
+    public Parent carregarComponente(String tela,Object object){
+        Parent parent=carregarComponente(tela);
+        if(parent!=null){
+            parent.setUserData(object);
+        }
+        return parent;
+    }
 }
