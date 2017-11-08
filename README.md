@@ -37,9 +37,12 @@ propriedades de conjuntos.
 - Gerar o conjunto diferença entre dois conjuntos, se houver;
 - Gerar o produto cartesiano entre dois conjuntos, se houver;
 
+>[Interface com as funcionalidades](https://github.com/lucasbiel7/MCConjunto/blob/master/src/main/java/br/com/MCConjunto/model/IManipularConjunto.java) 
+
 ### Entrada de dados
 
 - Tem como entrada até três conjuntos de caracteres
 - Não podem ter elementos iguais
 - O conjunto universo E representa o subconjunto de caracteres da tabela ASCII de A a Z (maiúsculos e minúsculos) e os dígitos de 0 a 9
+
 
