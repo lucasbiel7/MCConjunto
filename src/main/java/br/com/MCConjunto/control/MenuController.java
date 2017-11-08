@@ -5,17 +5,15 @@
  */
 package br.com.MCConjunto.control;
 
-import br.com.MCConjunto.model.GerenciadorDeJanela;
-import java.io.IOException;
+import br.com.MCConjunto.model.Conjunto;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -26,11 +24,29 @@ public class MenuController implements Initializable {
 
     @FXML
     private AnchorPane apPrincipal;
+    
+    private List<Conjunto<String>> listaDeConjuntos;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        listaDeConjuntos=new ArrayList<>();
+    }
+    
+    @FXML
+    public void btAdicionarConjunto(ActionEvent ae){
         
-    }    
+    }
+    
+    @FXML
+    private void btCarregarConjuntos(ActionEvent ae){
+        
+    }
+    
+    @FXML
+    private void btManipularConjuntos(ActionEvent ae){
+        
+    }
 }

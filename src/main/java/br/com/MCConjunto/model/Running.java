@@ -6,9 +6,6 @@
 package br.com.MCConjunto.model;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -20,7 +17,7 @@ public class Running extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         GerenciadorDeJanela gerenciadorDeJanela=new GerenciadorDeJanela();
-        gerenciadorDeJanela.mostrarJanela(primaryStage, gerenciadorDeJanela.carregarComponente("Menu"), "Inicio").show();
+        gerenciadorDeJanela.mostrarJanela(primaryStage, gerenciadorDeJanela.carregarComponente("Menu"), "Início").show();
     }
     
     public static void main(String[] args) {
