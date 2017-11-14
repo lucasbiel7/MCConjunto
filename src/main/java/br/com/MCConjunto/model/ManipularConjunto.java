@@ -11,40 +11,45 @@ package br.com.MCConjunto.model;
  */
 
 
-public class ManipularConjunto implements IManipularConjunto<String>{
+public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
-    public boolean compararConjunto(Conjunto<String> primeiroConjunto, Conjunto<String> segundoConjunto) {
+    public boolean compararConjunto(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Conjunto<Conjunto<String>> conjuntoPotencia(Conjunto<String> primeiroCojunto, Conjunto<String> segundoConjunto) {
+    public Conjunto<Conjunto<Character>> conjuntoPotencia(Conjunto<Character> conjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean perteceAoConjunto(Conjunto<String> conjunto, String elemento) {
+    public boolean perteceAoConjunto(Conjunto<Character> conjunto, Character elemento) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Conjunto<String> conjuntoUniao(Conjunto<String> primeiroConjunto, Conjunto<String> segundoConjunto) {
+    public Conjunto<Character> conjuntoUniao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
+        Conjunto<Character> novoConjunto=new Conjunto<>(primeiroConjunto.getNome()+"U"+segundoConjunto.getNome());
+        novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
+        novoConjunto.getElementos().addAll(segundoConjunto.getElementos());
+        return novoConjunto;
+    }
+
+    @Override
+    public Conjunto<Character> conjuntoIntersecao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Conjunto<String> conjuntoIntersecao(Conjunto<String> primeiroConjunto, Conjunto<String> segundoConjunto) {
+    public Conjunto<Character> conjuntoDiferenca(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Conjunto<String> conjuntoDiferenca(Conjunto<String> primeiroConjunto, Conjunto<String> segundoConjunto) {
+    public Conjunto<ParOrdenado<Character, Character>> produtoCartesiano(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public Conjunto<ParOrdenado<String, String>> produtoCartesiano(Conjunto<String> primeiroConjunto, Conjunto<String> segundoConjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 }

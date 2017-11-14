@@ -6,7 +6,6 @@
 package br.com.MCConjunto.model;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
