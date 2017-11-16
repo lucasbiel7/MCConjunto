@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="448.0" prefWidth="639.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.ManipularConjuntoController">
+    <stylesheets>
+        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="70.0" layoutY="83.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#onActionCompararConjunto" prefHeight="72.0" prefWidth="334.0" text="Comparar conjuntos" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoPotencia" prefHeight="72.0" prefWidth="334.0" text="Conjunto potencia" />
+            <Button mnemonicParsing="false" onAction="#onActionPertenceAoConjunto" prefHeight="72.0" prefWidth="334.0" text="Pertece ao conjunto" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoUniao" prefHeight="72.0" prefWidth="334.0" text="Conjunto união" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoIntersecao" prefHeight="72.0" prefWidth="334.0" text="Conjunto Interseção" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoDiferenca" prefHeight="72.0" prefWidth="334.0" text="Conjunto diferença" />
+            <Button mnemonicParsing="false" onAction="#onProdutoCartesiano" prefHeight="72.0" prefWidth="334.0" text="Produto cartesiano" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
