@@ -28,7 +28,6 @@ public class Running extends Application{
     
     public static void main(String[] args) {
         launch(args);
-
 //Teste de união <-
 //        Conjunto<Character> c1=new Conjunto<>("A");
 //        c1.getElementos().add('a');
