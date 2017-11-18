@@ -40,7 +40,6 @@ public class ManipularConjuntoController implements Initializable {
             if(apPrincipal.getUserData() != null){
                 listaDeConjuntos=(List<Conjunto<String>>) apPrincipal.getUserData();
             }
-            System.out.println(listaDeConjuntos);
         });
     }    
     
