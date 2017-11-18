@@ -27,27 +27,26 @@ public class Running extends Application{
     }
     
     public static void main(String[] args) {
-//        launch(args);
-
+        launch(args);
 //Teste de união <-
-        Conjunto<Character> c1=new Conjunto<>("A");
-        c1.getElementos().add('a');
-        c1.getElementos().add('b');
-        c1.getElementos().add('x');
-        c1.getElementos().add('2');
-        Conjunto<Character> c2=new Conjunto<>("B");
-        c2.getElementos().add('a');
-        c2.getElementos().add('d');
-        c2.getElementos().add('2');
-        c2.getElementos().add('f');
-        c2.getElementos().add('8');
-        ManipularConjunto manipularConjunto=new ManipularConjunto();
-        Conjunto<Character> novoConjunto=manipularConjunto.conjuntoUniao(c1, c2);
-        System.out.println(novoConjunto.getNome());
-        System.out.print("{");
-        for (Character chara:novoConjunto.getElementos()) {
-            System.out.print(chara+",");
-        }
-        System.out.print("}");
+//        Conjunto<Character> c1=new Conjunto<>("A");
+//        c1.getElementos().add('a');
+//        c1.getElementos().add('b');
+//        c1.getElementos().add('x');
+//        c1.getElementos().add('2');
+//        Conjunto<Character> c2=new Conjunto<>("B");
+//        c2.getElementos().add('a');
+//        c2.getElementos().add('d');
+//        c2.getElementos().add('2');
+//        c2.getElementos().add('f');
+//        c2.getElementos().add('8');
+//        ManipularConjunto manipularConjunto=new ManipularConjunto();
+//        Conjunto<Character> novoConjunto=manipularConjunto.conjuntoUniao(c1, c2);
+//        System.out.println(novoConjunto.getNome());
+//        System.out.print("{");
+//        for (Character chara:novoConjunto.getElementos()) {
+//            System.out.print(chara+",");
+//        }
+//        System.out.print("}");
     }
 }
