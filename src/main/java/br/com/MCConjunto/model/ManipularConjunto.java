@@ -15,7 +15,12 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public boolean compararConjunto(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (Character elemento : primeiroConjunto.getElementos()) {
+            if(!perteceAoConjunto(segundoConjunto, elemento)){
+                return false;
+            }
+        }
+        return primeiroConjunto.getElementos().size()==segundoConjunto.getElementos().size();
     }
 
     @Override
@@ -25,7 +30,14 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public boolean perteceAoConjunto(Conjunto<Character> conjunto, Character elemento) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//     Implementação para verificar se a lista possui o elemento sem utilizar metodo já implementado
+//       for (Character elemento1 : conjunto.getElementos()) {
+//            if (elemento1.equals(elemento)) {
+//                return true;
+//            }
+//        }
+//        return false;
+        return conjunto.getElementos().contains(elemento);
     }
 
     @Override
@@ -50,6 +62,5 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
     public Conjunto<ParOrdenado<Character, Character>> produtoCartesiano(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
    
 }

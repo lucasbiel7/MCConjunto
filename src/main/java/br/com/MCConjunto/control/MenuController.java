@@ -29,7 +29,7 @@ public class MenuController implements Initializable {
     @FXML
     private AnchorPane apPrincipal;
     
-    private List<Conjunto<String>> listaDeConjuntos;
+    private List<Conjunto<Character>> listaDeConjuntos;
     
     /**
      * Initializes the controller class.
@@ -38,7 +38,7 @@ public class MenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         Platform.runLater(()->{
             if(apPrincipal.getUserData() instanceof List){
-                listaDeConjuntos=(List<Conjunto<String>>) apPrincipal.getUserData();
+                listaDeConjuntos=(List<Conjunto<Character>>) apPrincipal.getUserData();
             }
         });
         if(listaDeConjuntos==null){

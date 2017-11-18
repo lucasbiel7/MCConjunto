@@ -29,7 +29,7 @@ public class ManipularConjuntoController implements Initializable {
     @FXML
     private AnchorPane apPrincipal;
     
-    private List<Conjunto<String>> listaDeConjuntos;
+    private List<Conjunto<Character>> listaDeConjuntos;
     /**
      * Initializes the controller class.
      */
@@ -38,7 +38,7 @@ public class ManipularConjuntoController implements Initializable {
         // TODO
         Platform.runLater(()->{
             if(apPrincipal.getUserData() != null){
-                listaDeConjuntos=(List<Conjunto<String>>) apPrincipal.getUserData();
+                listaDeConjuntos=(List<Conjunto<Character>>) apPrincipal.getUserData();
             }
         });
     }    
