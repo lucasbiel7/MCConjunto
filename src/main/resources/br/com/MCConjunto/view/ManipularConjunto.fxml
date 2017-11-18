@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="448.0" prefWidth="639.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.ManipularConjuntoController">
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="499.0" prefWidth="639.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.ManipularConjuntoController">
     <stylesheets>
         <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
     </stylesheets>
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="70.0" layoutY="83.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+      <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="48.0" prefHeight="436.0" prefWidth="608.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="48.0">
          <children>
             <Button mnemonicParsing="false" onAction="#onActionCompararConjunto" prefHeight="72.0" prefWidth="334.0" text="Comparar conjuntos" />
             <Button mnemonicParsing="false" onAction="#onActionConjuntoPotencia" prefHeight="72.0" prefWidth="334.0" text="Conjunto potencia" />
@@ -21,5 +21,6 @@
             <Button mnemonicParsing="false" onAction="#onProdutoCartesiano" prefHeight="72.0" prefWidth="334.0" text="Produto cartesiano" />
          </children>
       </VBox>
+      <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltar" text="Voltar" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
    </children>
 </AnchorPane>
