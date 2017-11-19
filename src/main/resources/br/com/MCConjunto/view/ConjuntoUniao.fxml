@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.ConjuntoUniaoController">
+    <stylesheets>
+        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltar" text="Voltar" />
+      <Button layoutX="186.0" layoutY="137.0" mnemonicParsing="false" onAction="#onActionConjuntoUniao" text="Gerar conjunto união" />
+      <ComboBox layoutX="14.0" layoutY="57.0" onAction="#onActionCbPrimeiroConjunto" prefHeight="25.0" prefWidth="301.0" />
+      <ComboBox layoutX="14.0" layoutY="95.0" prefHeight="25.0" prefWidth="301.0" />
+   </children>
+</AnchorPane>
