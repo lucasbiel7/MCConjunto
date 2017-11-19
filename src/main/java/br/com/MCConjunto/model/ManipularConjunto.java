@@ -55,7 +55,10 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<Character> conjuntoDiferenca(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Conjunto<Character> novoConjunto=new Conjunto<>(primeiroConjunto+DIFERENCA+segundoConjunto);
+        novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
+        novoConjunto.getElementos().removeAll(segundoConjunto.getElementos());
+        return novoConjunto;
     }
 
     @Override
