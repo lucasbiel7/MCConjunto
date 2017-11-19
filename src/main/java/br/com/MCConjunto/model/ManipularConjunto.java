@@ -42,7 +42,8 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<Character> conjuntoUniao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        Conjunto<Character> novoConjunto=new Conjunto<>(primeiroConjunto.getNome()+UNIAO+segundoConjunto.getNome());
+        Conjunto<Character> novoConjunto=new Conjunto<>("("+primeiroConjunto.getNome()+UNIAO+segundoConjunto.getNome()+")");
+        //Utilizando a estrutura set para fazer a união
         novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
         novoConjunto.getElementos().addAll(segundoConjunto.getElementos());
         return novoConjunto;
@@ -55,7 +56,7 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<Character> conjuntoDiferenca(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        Conjunto<Character> novoConjunto=new Conjunto<>(primeiroConjunto+DIFERENCA+segundoConjunto);
+        Conjunto<Character> novoConjunto=new Conjunto<>("("+primeiroConjunto+DIFERENCA+segundoConjunto+")");
         novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
         novoConjunto.getElementos().removeAll(segundoConjunto.getElementos());
         return novoConjunto;
