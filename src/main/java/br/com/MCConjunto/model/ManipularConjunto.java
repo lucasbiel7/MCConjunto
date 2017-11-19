@@ -42,7 +42,7 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<Character> conjuntoUniao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        Conjunto<Character> novoConjunto=new Conjunto<>(primeiroConjunto.getNome()+"U"+segundoConjunto.getNome());
+        Conjunto<Character> novoConjunto=new Conjunto<>(primeiroConjunto.getNome()+UNIAO+segundoConjunto.getNome());
         novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
         novoConjunto.getElementos().addAll(segundoConjunto.getElementos());
         return novoConjunto;
@@ -62,5 +62,18 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
     public Conjunto<ParOrdenado<Character, Character>> produtoCartesiano(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
+
+    @Override
+    public String apresentarConjunto(Conjunto<Character> conjunto) {
+        StringBuilder conjuntoString = new StringBuilder(conjunto.toString());
+        conjuntoString.append(" = {");
+        for (Character elemento : ordernarConjunto(conjunto,Order.CRESCENTE)) {
+           conjuntoString.append(elemento);
+           conjuntoString.append(", ");
+        }
+        if(!conjunto.getElementos().isEmpty())
+            conjuntoString.delete(conjuntoString.toString().length()-2, conjuntoString.toString().length());
+        conjuntoString.append("}");
+        return conjuntoString.toString();
+    }
 }

@@ -44,16 +44,7 @@ public class Conjunto<Entidade extends Object> {
 
     @Override
     public String toString() {
-        StringBuilder conjuntoString = new StringBuilder(getNome());
-        conjuntoString.append("={");
-        for (Entidade elemento : elementos) {
-           conjuntoString.append(elemento);
-           conjuntoString.append(",");
-        }
-        if(!elementos.isEmpty())
-            conjuntoString.reverse();
-        conjuntoString.append("}");
-        return conjuntoString.toString();
+        return getNome();
     }
 
 }

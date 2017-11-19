@@ -83,6 +83,7 @@ public class ManipularConjuntoController implements Initializable {
         }
     }
     
+   
     @FXML
     private void onActionConjuntoIntersecao(ActionEvent ae){
         try{

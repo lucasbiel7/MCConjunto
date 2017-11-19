@@ -43,6 +43,21 @@ public class MenuController implements Initializable {
         });
         if(listaDeConjuntos==null){
             listaDeConjuntos=new ArrayList<>();
+            //TODO mock adicionado para testes
+            //Remover ao entregar o projeto
+            Conjunto<Character> c1=new Conjunto<>("A");
+            c1.getElementos().add('a');
+            c1.getElementos().add('b');
+            c1.getElementos().add('x');
+            c1.getElementos().add('2');
+            Conjunto<Character> c2=new Conjunto<>("B");
+            c2.getElementos().add('a');
+            c2.getElementos().add('d');
+            c2.getElementos().add('2');
+            c2.getElementos().add('f');
+            c2.getElementos().add('8');
+            listaDeConjuntos.add(c1);
+            listaDeConjuntos.add(c2);
         }
     }
     
