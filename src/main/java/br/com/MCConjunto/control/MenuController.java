@@ -56,8 +56,18 @@ public class MenuController implements Initializable {
             c2.getElementos().add('2');
             c2.getElementos().add('f');
             c2.getElementos().add('8');
+             Conjunto<Character> c3=new Conjunto<>("C");
+            c3.getElementos().add('a');
+            c3.getElementos().add('x');
+            c3.getElementos().add('2');
+            c3.getElementos().add('b');
+             Conjunto<Character> c4=new Conjunto<>("D");
+            c4.getElementos().add('a');
+            c4.getElementos().add('b');
             listaDeConjuntos.add(c1);
             listaDeConjuntos.add(c2);
+            listaDeConjuntos.add(c3);
+            listaDeConjuntos.add(c4);
         }
     }
     

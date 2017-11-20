@@ -5,6 +5,9 @@
  */
 package br.com.MCConjunto.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author berna
@@ -25,8 +28,46 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<Conjunto<Character>> conjuntoPotencia(Conjunto<Character> conjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Conjunto<Conjunto<Character>> resultado=new Conjunto<>("P("+conjunto+")");
+        resultado.getElementos().add(new Conjunto<>());
+        for (Character elemento : conjunto.getElementos()) {
+            Conjunto<Character> conjuntoUnidade=new Conjunto<>();
+            conjuntoUnidade.getElementos().add(elemento);
+            resultado.getElementos().add(conjuntoUnidade);
+            Set<Character> outrosElementos=new HashSet<>();
+            outrosElementos.addAll(conjunto.getElementos());
+            outrosElementos.remove(elemento);
+            if(!outrosElementos.isEmpty()){
+                conjuntosProvenientes(resultado,conjuntoUnidade,outrosElementos);
+            }
+        }
+        return resultado;
     }
+    
+     private void conjuntosProvenientes(Conjunto<Conjunto<Character>> resultado, Conjunto<Character> conjuntoUnidade,Set<Character> elementosNaoUsado) {
+         for (Character character : elementosNaoUsado) {
+            Conjunto<Character> novoConjunto=new Conjunto<>();
+            novoConjunto.getElementos().addAll(conjuntoUnidade.getElementos());
+            novoConjunto.getElementos().add(character);
+            if(validarConjunto(novoConjunto,resultado.getElementos()))
+                resultado.getElementos().add(novoConjunto);
+            Set<Character> outrosElementos=new HashSet<>();
+            outrosElementos.addAll(elementosNaoUsado);
+            outrosElementos.remove(character);
+            if(!outrosElementos.isEmpty()){
+                conjuntosProvenientes(resultado, novoConjunto, outrosElementos);
+            }
+         }
+     }
+     
+     public boolean validarConjunto(Conjunto<Character> conjunto,Set<Conjunto<Character>> conjuntos){
+         for (Conjunto<Character> conjuntoVerificar : conjuntos) {
+             if(compararConjunto(conjunto, conjuntoVerificar)){
+                 return false;
+             }
+         }
+         return true;
+     }
 
     @Override
     public boolean perteceAoConjunto(Conjunto<Character> conjunto, Character elemento) {
@@ -70,7 +111,9 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
     @Override
     public String apresentarConjunto(Conjunto<Character> conjunto) {
         StringBuilder conjuntoString = new StringBuilder(conjunto.toString());
-        conjuntoString.append(" = {");
+        if(!conjunto.getNome().isEmpty())
+            conjuntoString.append(" = ");
+        conjuntoString.append("{");
         for (Character elemento : ordernarConjunto(conjunto,Order.CRESCENTE)) {
            conjuntoString.append(elemento);
            conjuntoString.append(", ");
@@ -80,4 +123,6 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
         conjuntoString.append("}");
         return conjuntoString.toString();
     }
+
+   
 }

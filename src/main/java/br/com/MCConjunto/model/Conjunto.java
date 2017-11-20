@@ -19,6 +19,8 @@ public class Conjunto<Entidade extends Object> {
     private Set<Entidade> elementos;
 
     public Conjunto() {
+        nome="";
+        elementos=new HashSet<>();
     }
 
     public Conjunto(String nome) {

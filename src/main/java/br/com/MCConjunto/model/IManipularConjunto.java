@@ -20,6 +20,8 @@ public interface IManipularConjunto<Entidade extends Comparable> {
     public static final String INTERSECAO="∩";
     public static final String PERTENCE="∈";
     public static final String DIFERENCA="-";
+    public static final String VAZIO="Ø";
+    
     
     boolean compararConjunto(Conjunto<Entidade> primeiroConjunto,Conjunto<Entidade> segundoConjunto);
     Conjunto<Conjunto<Entidade>> conjuntoPotencia(Conjunto<Entidade> conjunto);
