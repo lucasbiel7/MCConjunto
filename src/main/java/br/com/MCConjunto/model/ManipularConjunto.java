@@ -118,9 +118,11 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
            conjuntoString.append(elemento);
            conjuntoString.append(", ");
         }
-        if(!conjunto.getElementos().isEmpty())
-            conjuntoString.delete(conjuntoString.toString().length()-2, conjuntoString.toString().length());
-        conjuntoString.append("}");
+        conjuntoString.delete(conjuntoString.toString().length()-(conjunto.getElementos().isEmpty()?1:2), conjuntoString.toString().length());
+        if(conjunto.getElementos().isEmpty())
+            conjuntoString.append(VAZIO);
+        else
+            conjuntoString.append("}");
         return conjuntoString.toString();
     }
 
