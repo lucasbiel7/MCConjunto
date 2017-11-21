@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.ConjuntoPotenciaController">
+    <stylesheets>
+        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
+    </stylesheets>
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionVoltar" text="Voltar" />
+      <VBox layoutX="25.0" layoutY="65.0" prefHeight="63.0" prefWidth="328.0">
+         <children>
+            <ComboBox fx:id="cbConjunto" onAction="#onActionConjunto" prefHeight="25.0" prefWidth="328.0" promptText="Selecione um conjunto" />
+            <Label fx:id="lbValor">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="205.0" layoutY="140.0" mnemonicParsing="false" onAction="#onActionConjuntoPotencia" text="Gerar conjunto potencia " />
+      <Label layoutX="24.0" layoutY="192.0" text="Resultado" />
+      <Label fx:id="lbResultado" alignment="TOP_LEFT" layoutX="24.0" layoutY="219.0" prefHeight="154.0" prefWidth="570.0" wrapText="true" />
+   </children>
+</AnchorPane>

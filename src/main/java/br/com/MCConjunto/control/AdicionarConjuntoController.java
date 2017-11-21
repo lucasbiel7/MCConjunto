@@ -39,27 +39,27 @@ public class AdicionarConjuntoController implements Initializable {
     private TextField tfNome;
     
     @FXML
-    private TableView<Conjunto<String>> tvConjuntos;
+    private TableView<Conjunto<Character>> tvConjuntos;
     @FXML
-    private TableColumn<Conjunto<String>,String> tcNomeConjunto;
+    private TableColumn<Conjunto<Character>,String> tcNomeConjunto;
     @FXML
-    private TableColumn<Conjunto<String>,Conjunto<String>> tcFuncao;
+    private TableColumn<Conjunto<Character>,Conjunto<Character>> tcFuncao;
     
-    private List<Conjunto<String>> conjuntos;
+    private List<Conjunto<Character>> conjuntos;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         Platform.runLater(()->{
-            conjuntos=(List<Conjunto<String>>) apPrincipal.getUserData();
+            conjuntos=(List<Conjunto<Character>>) apPrincipal.getUserData();
             carregarTabela();
         });
         tcNomeConjunto.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        tcFuncao.setCellValueFactory((TableColumn.CellDataFeatures<Conjunto<String>, Conjunto<String>> param) -> new SimpleObjectProperty<>(param.getValue()));
-        tcFuncao.setCellFactory((TableColumn<Conjunto<String>, Conjunto<String>> param) -> new TableCell<Conjunto<String>, Conjunto<String>>(){
+        tcFuncao.setCellValueFactory((TableColumn.CellDataFeatures<Conjunto<Character>, Conjunto<Character>> param) -> new SimpleObjectProperty<>(param.getValue()));
+        tcFuncao.setCellFactory((TableColumn<Conjunto<Character>, Conjunto<Character>> param) -> new TableCell<Conjunto<Character>, Conjunto<Character>>(){
             @Override
-            protected void updateItem(Conjunto<String> item, boolean empty) {
+            protected void updateItem(Conjunto<Character> item, boolean empty) {
                 super.updateItem(item, empty);
                 if(empty){
                     setGraphic(null);

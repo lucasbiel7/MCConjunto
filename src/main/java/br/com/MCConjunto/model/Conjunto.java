@@ -11,22 +11,23 @@ import java.util.Set;
 /**
  *
  * @author lucas
- * @param <Entidade>
- * Parametro generico para diferentes tipos de conjunto
+ * @param <Entidade> Parametro generico para diferentes tipos de conjunto
  */
 public class Conjunto<Entidade extends Object> {
-    
+
     private String nome;
     private Set<Entidade> elementos;
 
     public Conjunto() {
+        nome="";
+        elementos=new HashSet<>();
     }
 
     public Conjunto(String nome) {
         this.nome = nome;
         this.elementos = new HashSet<>();
     }
-    
+
     public String getNome() {
         return nome;
     }
@@ -42,4 +43,10 @@ public class Conjunto<Entidade extends Object> {
     public void setElementos(Set<Entidade> elementos) {
         this.elementos = elementos;
     }
+
+    @Override
+    public String toString() {
+        return getNome();
+    }
+
 }

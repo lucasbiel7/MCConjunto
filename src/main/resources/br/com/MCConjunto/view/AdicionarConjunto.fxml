@@ -8,16 +8,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="420.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.AdicionarConjuntoController">
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="427.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.AdicionarConjuntoController">
     <stylesheets>
         <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
     </stylesheets>
    <children>
-      <Label layoutX="43.0" layoutY="47.0" text="Nome do conjunto" />
-      <TextField fx:id="tfNome" layoutX="165.0" layoutY="43.0" prefHeight="25.0" prefWidth="303.0" />
-      <Button layoutX="165.0" layoutY="80.0" mnemonicParsing="false" onAction="#btAdicionarConjunto" prefHeight="39.0" prefWidth="67.0" text="Adicionar" />
-      <Button layoutX="537.0" layoutY="387.0" mnemonicParsing="false" onAction="#btVoltar" prefHeight="39.0" prefWidth="78.0" text="Voltar" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="15.0" />
-      <TableView fx:id="tvConjuntos" layoutX="43.0" layoutY="123.0" prefHeight="249.0" prefWidth="570.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="123.0">
+      <Label layoutX="44.0" layoutY="71.0" text="Nome do conjunto" />
+      <TextField fx:id="tfNome" layoutX="166.0" layoutY="67.0" prefHeight="25.0" prefWidth="303.0" />
+      <Button layoutX="166.0" layoutY="104.0" mnemonicParsing="false" onAction="#btAdicionarConjunto" prefHeight="39.0" prefWidth="67.0" text="Adicionar" />
+      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#btVoltar" prefHeight="32.0" prefWidth="67.0" text="Voltar" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <TableView fx:id="tvConjuntos" layoutX="15.0" layoutY="149.0" prefHeight="249.0" prefWidth="570.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="149.0">
         <columns>
           <TableColumn fx:id="tcNomeConjunto" prefWidth="75.0" text="Nome do conjunto" />
           <TableColumn fx:id="tcFuncao" prefWidth="75.0" text="Ação" />
