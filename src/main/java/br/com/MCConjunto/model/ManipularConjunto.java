@@ -105,7 +105,18 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<ParOrdenado<Character, Character>> produtoCartesiano(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Conjunto<ParOrdenado<Character,Character>> num=new Conjunto<>(primeiroConjunto.getNome()+"x"+segundoConjunto.getNome());
+        for(Character goku: primeiroConjunto.getElementos()){
+            for(Character vegeta: segundoConjunto.getElementos()){
+                ParOrdenado<Character,Character> alg=new ParOrdenado<>();
+                alg.setX(goku);
+                alg.setY(vegeta);
+                num.getElementos().add(alg);
+                //Chegou o Vegetto.
+            }
+            
+        }
+        return num;
     }
 
     @Override
