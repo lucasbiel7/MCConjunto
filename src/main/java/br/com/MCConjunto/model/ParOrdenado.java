@@ -16,6 +16,7 @@ package br.com.MCConjunto.model;
 
 public class ParOrdenado<X,Y> {
     
+    
     private X x;
     private Y y;
 
