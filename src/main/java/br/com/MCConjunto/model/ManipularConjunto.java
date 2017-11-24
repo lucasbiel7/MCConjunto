@@ -136,6 +136,4 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
             conjuntoString.append("}");
         return conjuntoString.toString();
     }
-
-   
 }
