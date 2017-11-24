@@ -13,6 +13,7 @@ package br.com.MCConjunto.model;
  * @param <Y>
  * Representacao de um par ordenado Y
  */
+
 public class ParOrdenado<X,Y> {
     
     private X x;
