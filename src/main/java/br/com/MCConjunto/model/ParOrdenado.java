@@ -34,5 +34,11 @@ public class ParOrdenado<X,Y> {
     public void setY(Y y) {
         this.y = y;
     }
+
+    @Override
+    public String toString() {
+        return "("+getX()+","+getY()+")";
+    }
     
+ 
 }
