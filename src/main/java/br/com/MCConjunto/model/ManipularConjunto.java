@@ -14,7 +14,7 @@ import java.util.Set;
  */
 
 
-public  class ManipularConjunto implements IManipularConjunto<Character>{
+public class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public boolean compararConjunto(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {

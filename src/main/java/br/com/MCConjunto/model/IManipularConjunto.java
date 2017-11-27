@@ -33,7 +33,7 @@ public interface IManipularConjunto<Entidade extends Comparable> {
     String apresentarConjunto(Conjunto<Entidade> conjunto);
     
     //Metodo Generico para ordenação 
-    default List<Entidade> ordernarConjunto(Conjunto<Entidade> conjunto,Order order){
+    default  List<Entidade> ordernarConjunto(Conjunto<Entidade> conjunto,Order order){
         List<Entidade> entidade=conjunto.getElementos().stream().collect(Collectors.toList());
         entidade.sort((Entidade e1,Entidade e2) -> e1.compareTo(e2));
         return entidade;

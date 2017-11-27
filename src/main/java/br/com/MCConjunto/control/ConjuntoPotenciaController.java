@@ -77,25 +77,7 @@ public class ConjuntoPotenciaController implements Initializable {
             StringBuilder stringBuilder=new StringBuilder(resultado.toString());
             stringBuilder.append(" = {");
             List<Conjunto<Character>> listaOrdenada=resultado.getElementos().stream().collect(Collectors.toList());
-            listaOrdenada.sort((Conjunto<Character> primeiroConjunto,Conjunto<Character> segundoConjunto)->{
-                if (primeiroConjunto.getElementos().size() < segundoConjunto.getElementos().size()) {
-                    return -1;
-                }else{
-                    if(primeiroConjunto.getElementos().size() == segundoConjunto.getElementos().size()){
-                        for (int i = 0; i < primeiroConjunto.getElementos().size(); i++) {
-                            int val= manipularConjunto.ordernarConjunto(primeiroConjunto, Order.CRESCENTE).get(i).compareTo(manipularConjunto.ordernarConjunto(segundoConjunto,Order.CRESCENTE).get(i));
-                            if(val == 0){
-                                continue;
-                            }else{
-                                 return val;
-                            }
-                        }
-                        return 0;
-                    }else{
-                        return 1;
-                    }
-                }
-            });
+            listaOrdenada.sort((Conjunto<Character> primeiroConjunto,Conjunto<Character> segundoConjunto)->primeiroConjunto.compareTo(segundoConjunto));
             for (Conjunto<Character> listaDeConjunto : listaOrdenada) {
                 stringBuilder.append(manipularConjunto.apresentarConjunto(listaDeConjunto));
                 stringBuilder.append(", ");
