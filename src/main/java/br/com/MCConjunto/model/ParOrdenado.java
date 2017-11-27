@@ -13,9 +13,8 @@ package br.com.MCConjunto.model;
  * @param <Y>
  * Representacao de um par ordenado Y
  */
-
-public class ParOrdenado<X,Y> {
-    
+public class ParOrdenado<X extends Comparable,Y extends Comparable> implements Comparable<ParOrdenado<X,Y>>{
+   
     private X x;
     private Y y;
 
@@ -33,6 +32,14 @@ public class ParOrdenado<X,Y> {
 
     public void setY(Y y) {
         this.y = y;
+    }
+
+    @Override
+    public int compareTo(ParOrdenado<X, Y> o) {
+        if (this.getX().compareTo(o.getX())==0) {
+            return this.getY().compareTo(o.getY());
+        }
+        return this.getX().compareTo(o.getX());
     }
     
 }
