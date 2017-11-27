@@ -23,6 +23,9 @@ and open the template in the editor.
     -fx-background-color: #505250;
     -fx-font: 12px bold;
     -fx-text-fill: white;
+    -fx-background-radius: 9,8,5,4,3;
+    -fx-effect: dropshadow( three-pass-box , rgba(255,255,255,0.2) ,
+                1, 0.0 , 0 , 1);
 }
 
 .button:hover{
