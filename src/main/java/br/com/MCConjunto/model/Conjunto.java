@@ -48,5 +48,4 @@ public class Conjunto<Entidade extends Object> {
     public String toString() {
         return getNome();
     }
-
 }
