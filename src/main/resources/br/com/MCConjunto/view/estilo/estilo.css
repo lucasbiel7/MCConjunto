@@ -8,16 +8,45 @@ and open the template in the editor.
     Author     : lucas
 */
 .mainFxmlClass{
-    -fx-background-color: white;
+    -fx-background-color: linear-gradient(#686868 0%, #232723 25%, #373837 75%, #757575 100%),
+        linear-gradient(#020b02, #3a3a3a),
+        linear-gradient(#9d9e9d 0%, #6b6a6b 20%, #343534 80%, #242424 100%),
+        linear-gradient(#8a8a8a 0%, #6b6a6b 20%, #343534 80%, #262626 100%),
+        linear-gradient(#777777 0%, #606060 50%, #505250 51%, #2a2b2a 100%);
 }
 
+.label{
+    -fx-text-fill: white;
+}
+/*Colocando estilo nos botões do sistema. O estilo aplica a todos os botões*/
 .button{
-        
+    -fx-background-color: #505250;
+    -fx-font: 12px bold;
+    -fx-text-fill: white;
 }
 
+.button:hover{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+/*Colocando os scrollpane invisivel para conseguir visualizar os labels brancos*/
+.scroll-pane{
+   -fx-background-color:transparent;
+}
+
+.scroll-pane .viewport {
+       -fx-background-color: transparent;
+}
+/*Estilo das tabelas do sistema*/
+.table-view .column-header{
+    -fx-background-color: black;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+}
 /* Botões para o primeiro menu*/
 .buttonMenu{
     
 }
-
-
