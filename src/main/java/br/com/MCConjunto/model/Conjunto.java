@@ -108,5 +108,4 @@ public class Conjunto<Entidade extends Comparable> implements Comparable<Conjunt
             return 1;
         }
     }
-    
 }
