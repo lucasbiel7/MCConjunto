@@ -8,6 +8,8 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" fx:id="tlPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.CarregarConjuntosController">
@@ -17,7 +19,14 @@
    <children>
       <ComboBox fx:id="cbConjunto" layoutX="62.0" layoutY="69.0" prefHeight="25.0" prefWidth="268.0" />
       <Label layoutX="62.0" layoutY="46.0" text="Selecione um conjunto" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionBtVoltar" text="Voltar" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionBtVoltar" prefHeight="25.0" prefWidth="35.0">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button layoutX="342.0" layoutY="97.0" mnemonicParsing="false" onAction="#onActionAdicionar" text="Adicionar" />
       <TableView fx:id="tvConjuntos" layoutX="21.0" layoutY="146.0" prefHeight="200.0" prefWidth="528.0">
         <columns>
