@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane id="AnchorPane" fx:id="tlPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.CarregarConjuntosController">
@@ -17,7 +18,7 @@
       <ComboBox fx:id="cbConjunto" layoutX="62.0" layoutY="69.0" prefHeight="25.0" prefWidth="268.0" />
       <Label layoutX="62.0" layoutY="46.0" text="Selecione um conjunto" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionBtVoltar" text="Voltar" />
-      <Button layoutX="342.0" layoutY="97.0" mnemonicParsing="false" onAction="#onActionBtAdicionar" text="Adicionar" />
+      <Button layoutX="342.0" layoutY="97.0" mnemonicParsing="false" onAction="#onActionAdicionar" text="Adicionar" />
       <TableView fx:id="tvConjuntos" layoutX="21.0" layoutY="146.0" prefHeight="200.0" prefWidth="528.0">
         <columns>
           <TableColumn fx:id="tcNome" maxWidth="300.0" minWidth="100.0" prefWidth="300.0" text="Nome" />
@@ -27,6 +28,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField fx:id="tfNomeElemento" layoutX="62.0" layoutY="97.0" prefHeight="25.0" prefWidth="268.0" />
+      <TextField fx:id="tfNomeElemento" layoutX="62.0" layoutY="97.0" prefHeight="25.0" prefWidth="268.0">
+         <tooltip>
+            <Tooltip text="Para adicionar mais de um elemento utilze ';'." />
+         </tooltip></TextField>
    </children>
 </AnchorPane>

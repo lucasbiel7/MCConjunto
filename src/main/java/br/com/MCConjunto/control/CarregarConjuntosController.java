@@ -81,12 +81,16 @@ public class CarregarConjuntosController implements Initializable {
     @FXML
     private void onActionAdicionar(ActionEvent ae) {
         String[] elementos = tfNomeElemento.getText().split(";");
+        if( cbConjunto.getSelectionModel().getSelectedItem() == null){
+            new Alert(Alert.AlertType.ERROR, "Selecione um conjunto.").showAndWait();
+            return;
+        }
         for (String elemento : elementos) {
-            if (elemento.matches("^([A-Za-z0-9](1))")) {
+            if (elemento.matches("^([A-Za-z0-9]{1})$")) {
                 cbConjunto.getSelectionModel().getSelectedItem().getElementos().add(elemento.charAt(0));
-                new Alert(Alert.AlertType.INFORMATION, "Elemento" + elemento + "foi adicionado com sucesso").showAndWait();
+                new Alert(Alert.AlertType.INFORMATION, "Elemento '" + elemento + "' foi adicionado com sucesso").showAndWait();
             } else {
-                new Alert(Alert.AlertType.ERROR, "Elemento" + elemento + "não é válido.").showAndWait();
+                new Alert(Alert.AlertType.ERROR, "Elemento '" + elemento + "' não é válido.").showAndWait();
             }
             tvConjuntos.getItems().setAll(listaDeConjuntos);
             tfNomeElemento.clear();
