@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="apPrincipal" id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.ProdutoCartesianoController">
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.ProdutoCartesianoController">
     <stylesheets>
-        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css"/>
+        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
     </stylesheets>
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Voltar" />
+      <Accordion layoutX="38.0" layoutY="61.0" />
+      <Accordion layoutX="38.0" layoutY="69.0" />
+      <ComboBox fx:id="cbPrimeiroConjunto" layoutX="55.0" layoutY="83.0" onAction="#onActionPrimeiroConjunto" prefHeight="25.0" prefWidth="259.0" promptText="Selecione o 1º Conjunto" />
+      <ComboBox layoutX="55.0" layoutY="154.0" prefHeight="25.0" prefWidth="259.0" promptText="Selecione o 2º Conjunto" />
+      <Label fx:id="lbPrimeiroConjunto" layoutX="55.0" layoutY="116.0" prefHeight="25.0" prefWidth="259.0" />
+      <Label layoutX="55.0" layoutY="194.0" prefHeight="25.0" prefWidth="267.0" />
+      <Button layoutX="62.0" layoutY="240.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" text="Gerar" />
+      <Label layoutX="59.0" layoutY="289.0" prefHeight="25.0" prefWidth="259.0" text="Resultado:" />
+      <Label layoutX="55.0" layoutY="314.0" prefHeight="25.0" prefWidth="259.0" />
+   </children>
 </AnchorPane>
