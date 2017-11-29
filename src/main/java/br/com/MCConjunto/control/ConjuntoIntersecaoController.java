@@ -99,7 +99,7 @@ public class ConjuntoIntersecaoController implements Initializable {
     @FXML
     private void onActionConjuntoIntersecao(ActionEvent ae){
        if(cbPrimeiroConjunto.getSelectionModel().getSelectedItem()!=null && cbSegundoConjunto.getSelectionModel().getSelectedItem()!=null){
-               resultado=manipularConjunto.conjuntoIntersecao(cbPrimeiroConjunto.getSelectionModel().getSelectedItem(), cbSegundoConjunto.getSelectionModel().getSelectedItem());
+            resultado=manipularConjunto.conjuntoIntersecao(cbPrimeiroConjunto.getSelectionModel().getSelectedItem(), cbSegundoConjunto.getSelectionModel().getSelectedItem());
             lbResultado.setText(manipularConjunto.apresentarConjunto(resultado));
         }else{
             new Alert(Alert.AlertType.ERROR, "É necessário selecionar os dois conjuntos primeiro!").showAndWait();
