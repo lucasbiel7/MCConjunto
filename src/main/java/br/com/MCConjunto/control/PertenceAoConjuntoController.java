@@ -68,7 +68,7 @@ public class PertenceAoConjuntoController implements Initializable {
     public void onActionBtVoltar(ActionEvent ae){
         try {
             GerenciadorDeJanela gerenciadorDeJanela = new GerenciadorDeJanela(tlPrincipal.getScene());
-            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("Menu", listaDeConjuntos));
+            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("ManipularConjunto", listaDeConjuntos));
         } catch (Exception e) {
             new Alert(Alert.AlertType.ERROR, "Módulo ainda não foi construido", ButtonType.OK).showAndWait();
         }
