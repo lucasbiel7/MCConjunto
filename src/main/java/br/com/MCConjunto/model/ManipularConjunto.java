@@ -114,7 +114,6 @@ public class ManipularConjunto implements IManipularConjunto<Character>{
                 num.getElementos().add(alg);
                 //Chegou o Vegetto.
             }
-            
         }
         return num;
     }
