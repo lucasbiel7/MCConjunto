@@ -92,7 +92,13 @@ public class ManipularConjunto implements IManipularConjunto<Character>{
 
     @Override
     public Conjunto<Character> conjuntoIntersecao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         Conjunto<Character> novoConjunto=new Conjunto<>("("+primeiroConjunto+INTERSECAO+segundoConjunto+")");
+        for (Character elementos1: primeiroConjunto.getElementos()){
+            if(perteceAoConjunto(segundoConjunto, elementos1)){
+                novoConjunto.getElementos().add(elementos1);
+            }
+        }             
+        return novoConjunto;
     }
 
     @Override
