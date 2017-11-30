@@ -14,17 +14,7 @@ import java.util.Set;
  */
 
 
-public  class ManipularConjunto implements IManipularConjunto<Character>{
-
-    @Override
-    public boolean compararConjunto(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        for (Character elemento : primeiroConjunto.getElementos()) {
-            if(!perteceAoConjunto(segundoConjunto, elemento)){
-                return false;
-            }
-        }
-        return primeiroConjunto.getElementos().size()==segundoConjunto.getElementos().size();
-    }
+public  class ManipularConjunto extends ManipularConjuntoBase<Character>{
 
     @Override
     public Conjunto<Conjunto<Character>> conjuntoPotencia(Conjunto<Character> conjunto) {
@@ -60,7 +50,7 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
          }
      }
      
-     public boolean validarConjunto(Conjunto<Character> conjunto,Set<Conjunto<Character>> conjuntos){
+    public boolean validarConjunto(Conjunto<Character> conjunto,Set<Conjunto<Character>> conjuntos){
          for (Conjunto<Character> conjuntoVerificar : conjuntos) {
              if(compararConjunto(conjunto, conjuntoVerificar)){
                  return false;
@@ -69,39 +59,13 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
          return true;
      }
 
-    @Override
-    public boolean perteceAoConjunto(Conjunto<Character> conjunto, Character elemento) {
-//     Implementação para verificar se a lista possui o elemento sem utilizar metodo já implementado
-//       for (Character elemento1 : conjunto.getElementos()) {
-//            if (elemento1.equals(elemento)) {
-//                return true;
-//            }
-//        }
-//        return false;
-        return conjunto.getElementos().contains(elemento);
-    }
-
-    @Override
-    public Conjunto<Character> conjuntoUniao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        Conjunto<Character> novoConjunto=new Conjunto<>("("+primeiroConjunto.getNome()+UNIAO+segundoConjunto.getNome()+")");
-        //Utilizando a estrutura set para fazer a união
-        novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
-        novoConjunto.getElementos().addAll(segundoConjunto.getElementos());
-        return novoConjunto;
-    }
-
+    
     @Override
     public Conjunto<Character> conjuntoIntersecao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public Conjunto<Character> conjuntoDiferenca(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        Conjunto<Character> novoConjunto=new Conjunto<>("("+primeiroConjunto+DIFERENCA+segundoConjunto+")");
-        novoConjunto.getElementos().addAll(primeiroConjunto.getElementos());
-        novoConjunto.getElementos().removeAll(segundoConjunto.getElementos());
-        return novoConjunto;
-    }
+    
 
     @Override
     public Conjunto<ParOrdenado<Character, Character>> produtoCartesiano(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
@@ -114,26 +78,7 @@ public  class ManipularConjunto implements IManipularConjunto<Character>{
                 num.getElementos().add(alg);
                 //Chegou o Vegetto.
             }
-            
         }
         return num;
-    }
-
-    @Override
-    public String apresentarConjunto(Conjunto<Character> conjunto) {
-        StringBuilder conjuntoString = new StringBuilder(conjunto.toString());
-        if(!conjunto.getNome().isEmpty())
-            conjuntoString.append(" = ");
-        conjuntoString.append("{");
-        for (Character elemento : ordernarConjunto(conjunto,Order.CRESCENTE)) {
-           conjuntoString.append(elemento);
-           conjuntoString.append(", ");
-        }
-        conjuntoString.delete(conjuntoString.toString().length()-(conjunto.getElementos().isEmpty()?1:2), conjuntoString.toString().length());
-        if(conjunto.getElementos().isEmpty())
-            conjuntoString.append(VAZIO);
-        else
-            conjuntoString.append("}");
-        return conjuntoString.toString();
     }
 }
