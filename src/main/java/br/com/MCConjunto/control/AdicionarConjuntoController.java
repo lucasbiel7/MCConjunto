@@ -93,6 +93,10 @@ public class AdicionarConjuntoController implements Initializable {
             new Alert(Alert.AlertType.ERROR, "Já existe um conjunto com esse nome").showAndWait();
             return;
         }
+        if(!tfNome.getText().matches("^([A-Z]{1})$")){
+            new Alert(Alert.AlertType.ERROR,"O nome do conjunto deve ser uma letra entre A-Z").showAndWait();
+            return ;
+        }
         conjuntos.add(new Conjunto<>(tfNome.getText()));
         carregarTabela();
         tfNome.clear();
