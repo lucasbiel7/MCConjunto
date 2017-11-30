@@ -37,7 +37,7 @@
             </ScrollPane>
          </children>
       </VBox>
-      <Button layoutX="205.0" layoutY="140.0" mnemonicParsing="false" onAction="#onActionConjuntoPotencia" text="Gerar conjunto potencia " />
+      <Button layoutX="205.0" layoutY="140.0" mnemonicParsing="false" onAction="#onActionConjuntoPotencia" text="Gerar conjunto potência " />
       <Label layoutX="24.0" layoutY="192.0" text="Resultado" />
       <ScrollPane fitToWidth="true" layoutX="24.0" layoutY="219.0" prefHeight="166.0" prefWidth="572.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="219.0">
          <content>
