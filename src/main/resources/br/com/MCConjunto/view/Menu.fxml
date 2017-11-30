@@ -12,8 +12,9 @@
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="292.0" spacing="15.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#btAdicionarConjunto" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Adicionar Conjunto" />
-                  <Button mnemonicParsing="false" onAction="#btCarregarConjuntos" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Adicionar Elementos" />
+                  <Button mnemonicParsing="false" onAction="#btCarregarConjuntos" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Adicionar/Remover elementos" />
                   <Button mnemonicParsing="false" onAction="#btManipularConjuntos" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Manipular Conjuntos" />
+
                </children>
             </VBox>
          </children>
