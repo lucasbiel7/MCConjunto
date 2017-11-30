@@ -5,7 +5,6 @@
  */
 package br.com.MCConjunto.model;
 
-import static br.com.MCConjunto.model.IManipularConjunto.INTERSECAO;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,6 +28,10 @@ public  class ManipularConjunto extends ManipularConjuntoBase<Character>{
             outrosElementos.remove(elemento);
             if(!outrosElementos.isEmpty()){
                 conjuntosProvenientes(resultado,conjuntoUnidade,outrosElementos);
+            }
+            //Melhorar desempenho
+            if(resultado.getElementos().size() == Math.pow(2, conjunto.getElementos().size())){
+                break;
             }
         }
         return resultado;
@@ -58,5 +61,4 @@ public  class ManipularConjunto extends ManipularConjuntoBase<Character>{
          }
          return true;
     }
-    
 }

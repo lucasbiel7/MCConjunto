@@ -6,7 +6,9 @@
 package br.com.MCConjunto.control;
 
 import br.com.MCConjunto.model.Conjunto;
+import br.com.MCConjunto.model.GerenciadorDeJanela;
 import br.com.MCConjunto.model.ManipularConjunto;
+import br.com.MCConjunto.model.ManipularConjuntoBase;
 import br.com.MCConjunto.model.ParOrdenado;
 import java.net.URL;
 import java.util.List;
@@ -16,6 +18,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -85,10 +88,20 @@ public class ProdutoCartesianoController implements Initializable {
     private void onGerar(ActionEvent ae) {
         if (cbPrimeiroConjunto.getSelectionModel().getSelectedItem() != null && cbSegundoConjunto.getSelectionModel().getSelectedItem() != null) {
             Conjunto<ParOrdenado<Character, Character>> resultado = manipularConjunto.produtoCartesiano(cbPrimeiroConjunto.getSelectionModel().getSelectedItem(), cbSegundoConjunto.getSelectionModel().getSelectedItem());
-            
+            lbResultado.setText(new ManipularConjuntoBase<ParOrdenado<Character,Character>>() {}.apresentarConjunto(resultado));
         } else {
+            lbResultado.setText("");
             new Alert(Alert.AlertType.ERROR, "É necessário selecionar dois conjuntos para gerar o produto cartesiano entre eles").showAndWait();
         }
     }
-
+    
+    @FXML
+    private void onActionVoltar(ActionEvent ae){
+         try{
+            GerenciadorDeJanela gerenciadorDeJanela=new GerenciadorDeJanela(apPrincipal.getScene());
+            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("ManipularConjunto",conjuntos));
+        }catch(Exception e){
+            new Alert(Alert.AlertType.ERROR, "Módulo ainda não foi construido", ButtonType.OK).showAndWait();
+        }
+    }
 }

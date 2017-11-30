@@ -94,6 +94,8 @@ public abstract class ManipularConjuntoBase<Entidade extends Comparable> impleme
     }
 
     @Override
-    public abstract Conjunto<Conjunto<Entidade>> conjuntoPotencia(Conjunto<Entidade> conjunto);
+    public Conjunto<Conjunto<Entidade>> conjuntoPotencia(Conjunto<Entidade> conjunto) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
