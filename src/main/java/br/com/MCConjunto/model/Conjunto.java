@@ -51,47 +51,7 @@ public class Conjunto<Entidade extends Comparable> implements Comparable<Conjunt
 
     @Override
     public int compareTo(Conjunto<Entidade> comparado) {
-        IManipularConjunto<Entidade> manipularConjunto = new IManipularConjunto<Entidade>() {
-            @Override
-            public boolean compararConjunto(Conjunto<Entidade> primeiroConjunto, Conjunto<Entidade> segundoConjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Conjunto<Conjunto<Entidade>> conjuntoPotencia(Conjunto<Entidade> conjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public boolean perteceAoConjunto(Conjunto<Entidade> conjunto, Entidade elemento) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Conjunto<Entidade> conjuntoUniao(Conjunto<Entidade> primeiroConjunto, Conjunto<Entidade> segundoConjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Conjunto<Entidade> conjuntoIntersecao(Conjunto<Entidade> primeiroConjunto, Conjunto<Entidade> segundoConjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Conjunto<Entidade> conjuntoDiferenca(Conjunto<Entidade> primeiroConjunto, Conjunto<Entidade> segundoConjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public Conjunto<ParOrdenado<Entidade, Entidade>> produtoCartesiano(Conjunto<Entidade> primeiroConjunto, Conjunto<Entidade> segundoConjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-
-            @Override
-            public String apresentarConjunto(Conjunto<Entidade> conjunto) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
+        IManipularConjunto<Entidade> manipularConjunto = new ManipularConjuntoBase<Entidade>() {};
         if (this.getElementos().size() < comparado.getElementos().size()) {
             return -1;
         } else if (this.getElementos().size() == comparado.getElementos().size()) {
