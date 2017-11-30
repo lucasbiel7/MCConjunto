@@ -86,6 +86,7 @@ public class ComparaConjuntoController implements Initializable {
         vbConjuntos.getChildren().clear();
         for (Conjunto<Character> conjunto : listaDeConjuntos) {
             Label label=new Label(manipularConjunto.apresentarConjunto(conjunto));
+            label.setWrapText(true);
             vbConjuntos.getChildren().add(label);
         }
     }

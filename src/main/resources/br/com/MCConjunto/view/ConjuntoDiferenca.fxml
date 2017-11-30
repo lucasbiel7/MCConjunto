@@ -1,42 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.image.Image?>
 
-<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.ConjuntoDiferencaController">
-    <stylesheets>
-        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.ConjuntoDiferencaController">
    <children>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionVoltar" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" >
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onActionVoltar" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
             <graphic>
-                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" >
-                    <Image url="@/br/com/MCConjunto/view/image/back.png" />
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@image/back.png" />
                 </ImageView> 
             </graphic>
       </Button>
-      <Button layoutX="196.0" layoutY="181.0" mnemonicParsing="false" onAction="#onActionConjuntoDiferenca" text="Gerar conjunto diferença" />
+      <Button layoutX="343.0" layoutY="141.0" mnemonicParsing="false" onAction="#onActionConjuntoDiferenca" text="Gerar conjunto diferença" />
       <VBox layoutX="24.0" layoutY="67.0" prefHeight="105.0" prefWidth="301.0" spacing="2.0">
          <children>
-            <ComboBox fx:id="cbPrimeiroConjunto" onAction="#onActionCbPrimeiroConjunto" prefHeight="25.0" prefWidth="301.0" />
-            <Label fx:id="lbPrimeiroConjunto" />
-            <ComboBox fx:id="cbSegundoConjunto" onAction="#onActionCbSegundoConjunto" prefHeight="25.0" prefWidth="301.0" />
-            <Label fx:id="lbSegundoConjunto" />
+            <ComboBox fx:id="cbPrimeiroConjunto" onAction="#onActionCbPrimeiroConjunto" prefHeight="25.0" prefWidth="301.0" promptText="Selecione o primeiro conjunto" />
+            <ScrollPane fitToWidth="true">
+               <content>
+                  <Label fx:id="lbPrimeiroConjunto" wrapText="true" />
+               </content>
+            </ScrollPane>
+            <ComboBox fx:id="cbSegundoConjunto" onAction="#onActionCbSegundoConjunto" prefHeight="25.0" prefWidth="301.0" promptText="Selecione o segundo conjunto" />
+            <ScrollPane fitToWidth="true">
+               <content>
+                  <Label fx:id="lbSegundoConjunto" wrapText="true" />
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
-      <Label layoutX="24.0" layoutY="193.0" text="Resultado" />
-      <Label fx:id="lbResultado" alignment="TOP_LEFT" layoutX="24.0" layoutY="224.0" prefHeight="137.0" prefWidth="570.0" textOverrun="CLIP" wrapText="true">
-         <font>
-            <Font size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="24.0" layoutY="371.0" mnemonicParsing="false" onAction="#onActionAdicionarResultado" text="Adicionar resultado a lista de conjuntos" />
+      <Label layoutX="24.0" layoutY="200.0" text="Resultado" />
+      <ScrollPane fitToWidth="true" layoutX="24.0" layoutY="224.0" prefHeight="136.0" prefWidth="572.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="224.0">
+         <content>
+            <Label fx:id="lbResultado" alignment="TOP_LEFT" prefWidth="570.0" textOverrun="CLIP" wrapText="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </content>
+      </ScrollPane>
+      <Button layoutX="24.0" layoutY="371.0" mnemonicParsing="false" onAction="#onActionAdicionarResultado" text="Adicionar resultado a lista de conjuntos" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="24.0" />
    </children>
 </AnchorPane>

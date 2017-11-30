@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -11,12 +10,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="tlPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="br.com.MCConjunto.control.PertenceAoConjuntoController">
-    <stylesheets>
-        <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" fx:id="tlPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.PertenceAoConjuntoController">
    <children>
-      <TextField fx:id="tfVerificarElemento" layoutX="14.0" layoutY="89.0" prefHeight="25.0" prefWidth="212.0" />
+      <TextField fx:id="tfVerificarElemento" layoutX="15.0" layoutY="97.0" prefHeight="25.0" prefWidth="212.0" />
       <Button layoutX="14.0" layoutY="27.0" mnemonicParsing="false" onAction="#onActionBtVoltar">
          <graphic>
             <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
@@ -26,9 +22,9 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button layoutX="237.0" layoutY="89.0" mnemonicParsing="false" onAction="#onActionBtVefificar" text="Verificar " />
-      <Label layoutX="16.0" layoutY="59.0" text="Digite um elemento para verificar" />
-      <TableView fx:id="tvConjuntos" layoutX="21.0" layoutY="146.0" prefHeight="200.0" prefWidth="561.0">
+      <Button layoutX="238.0" layoutY="97.0" mnemonicParsing="false" onAction="#onActionBtVefificar" text="Verificar " />
+      <Label layoutX="17.0" layoutY="67.0" text="Digite um elemento para verificar" />
+      <TableView fx:id="tvConjuntos" layoutX="13.0" layoutY="135.0" prefHeight="250.0" prefWidth="570.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="135.0">
         <columns>
           <TableColumn fx:id="tcNome" maxWidth="300.0" minWidth="100.0" prefWidth="300.0" text="Nome" />
           <TableColumn fx:id="tcElementos" prefWidth="75.0" text="Elementos" />
