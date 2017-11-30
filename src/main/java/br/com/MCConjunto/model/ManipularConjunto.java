@@ -5,17 +5,17 @@
  */
 package br.com.MCConjunto.model;
 
+import static br.com.MCConjunto.model.IManipularConjunto.INTERSECAO;
 import java.util.HashSet;
 import java.util.Set;
 
 /**
  *
- * @author berna
+ * @author bernardo
  */
 
-
 public  class ManipularConjunto extends ManipularConjuntoBase<Character>{
-
+    
     @Override
     public Conjunto<Conjunto<Character>> conjuntoPotencia(Conjunto<Character> conjunto) {
         Conjunto<Conjunto<Character>> resultado=new Conjunto<>("P("+conjunto+")");
@@ -57,28 +57,6 @@ public  class ManipularConjunto extends ManipularConjuntoBase<Character>{
              }
          }
          return true;
-     }
-
-    
-    @Override
-    public Conjunto<Character> conjuntoIntersecao(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
     
-
-    @Override
-    public Conjunto<ParOrdenado<Character, Character>> produtoCartesiano(Conjunto<Character> primeiroConjunto, Conjunto<Character> segundoConjunto) {
-        Conjunto<ParOrdenado<Character,Character>> num=new Conjunto<>(primeiroConjunto.getNome()+"x"+segundoConjunto.getNome());
-        for(Character goku: primeiroConjunto.getElementos()){
-            for(Character vegeta: segundoConjunto.getElementos()){
-                ParOrdenado<Character,Character> alg=new ParOrdenado<>();
-                alg.setX(goku);
-                alg.setY(vegeta);
-                num.getElementos().add(alg);
-                //Chegou o Vegetto.
-            }
-        }
-        return num;
-    }
 }

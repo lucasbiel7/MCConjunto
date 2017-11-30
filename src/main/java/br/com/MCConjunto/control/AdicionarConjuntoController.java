@@ -1,4 +1,4 @@
-/*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -10,6 +10,7 @@ import br.com.MCConjunto.model.GerenciadorDeJanela;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
@@ -24,6 +25,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -84,6 +87,10 @@ public class AdicionarConjuntoController implements Initializable {
     private void btAdicionarConjunto(ActionEvent ae){
         if(tfNome.getText().isEmpty()){
             new Alert(Alert.AlertType.ERROR,"Digite um nome para o conjunto").showAndWait();
+            return;
+        }
+        if(!conjuntos.stream().map(Conjunto::getNome).filter((String nome)->nome.equalsIgnoreCase(tfNome.getText())).collect(Collectors.toList()).isEmpty()){
+            new Alert(Alert.AlertType.ERROR, "Já existe um conjunto com esse nome").showAndWait();
             return;
         }
         conjuntos.add(new Conjunto<>(tfNome.getText()));

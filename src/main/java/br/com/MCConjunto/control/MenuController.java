@@ -85,7 +85,7 @@ public class MenuController implements Initializable {
     private void btCarregarConjuntos(ActionEvent ae){
         try{
             GerenciadorDeJanela gerenciadorDeJanela=new GerenciadorDeJanela(apPrincipal.getScene());
-            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("CarregarConjunto",listaDeConjuntos));
+            gerenciadorDeJanela.trocarCena(gerenciadorDeJanela.carregarComponente("CarregarConjuntos",listaDeConjuntos));
         }catch(Exception e){
             new Alert(Alert.AlertType.ERROR, "Módulo ainda não foi construido", ButtonType.OK).showAndWait();
         }

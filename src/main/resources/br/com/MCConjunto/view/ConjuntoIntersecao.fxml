@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="tlPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.ConjuntoIntersecaoController">
+   <children>
+      <ComboBox fx:id="cbPrimeiroConjunto" layoutX="14.0" layoutY="70.0" onAction="#onActionCbPrimeiroConjunto" prefHeight="25.0" prefWidth="280.0" />
+      <ComboBox fx:id="cbSegundoConjunto" layoutX="14.0" layoutY="117.0" onAction="#onActionCbSegundoConjunto" prefHeight="25.0" prefWidth="280.0" />
+      <Button layoutX="309.0" layoutY="117.0" mnemonicParsing="false" onAction="#onActionConjuntoIntersecao" prefHeight="25.0" prefWidth="162.0" text="Gerar conjunto interseção " />
+      <Label layoutX="26.0" layoutY="176.0" text="Resultado" />
+      <Label fx:id="lbPrimeiroConjunto" layoutX="14.0" layoutY="96.0" />
+      <Label fx:id="lbSegundoConjunto" layoutX="14.0" layoutY="150.0" prefHeight="17.0" prefWidth="138.0" />
+      <Label fx:id="lbResultado" alignment="TOP_LEFT" layoutX="19.0" layoutY="200.0" prefHeight="137.0" prefWidth="562.0" />
+      <Button layoutX="20.0" layoutY="361.0" mnemonicParsing="false" onAction="#onActionAdicionarResultado" text="Adicionar resultado a lista de conjuntos" />
+      <Button layoutX="14.0" layoutY="26.0" mnemonicParsing="false" onAction="#onActionBtVoltar">
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/back.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

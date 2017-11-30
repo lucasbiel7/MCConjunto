@@ -2,6 +2,8 @@
 
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -12,15 +14,21 @@
    <children>
       <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="48.0" prefHeight="436.0" prefWidth="608.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="48.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#onActionCompararConjunto" prefHeight="72.0" prefWidth="334.0" text="Comparar conjuntos" />
-            <Button mnemonicParsing="false" onAction="#onActionConjuntoPotencia" prefHeight="72.0" prefWidth="334.0" text="Conjunto potencia" />
-            <Button mnemonicParsing="false" onAction="#onActionPertenceAoConjunto" prefHeight="72.0" prefWidth="334.0" text="Pertece ao conjunto" />
-            <Button mnemonicParsing="false" onAction="#onActionConjuntoUniao" prefHeight="72.0" prefWidth="334.0" text="Conjunto união" />
+            <Button mnemonicParsing="false" onAction="#onActionCompararConjunto" prefHeight="72.0" prefWidth="334.0" text="Comparar Conjuntos" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoPotencia" prefHeight="72.0" prefWidth="334.0" text="Conjunto Potência" />
+            <Button mnemonicParsing="false" onAction="#onActionPertenceAoConjunto" prefHeight="72.0" prefWidth="334.0" text="Pertence ao Conjunto" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoUniao" prefHeight="72.0" prefWidth="334.0" text="Conjunto União" />
             <Button mnemonicParsing="false" onAction="#onActionConjuntoIntersecao" prefHeight="72.0" prefWidth="334.0" text="Conjunto Interseção" />
-            <Button mnemonicParsing="false" onAction="#onActionConjuntoDiferenca" prefHeight="72.0" prefWidth="334.0" text="Conjunto diferença" />
-            <Button mnemonicParsing="false" onAction="#onProdutoCartesiano" prefHeight="72.0" prefWidth="334.0" text="Produto cartesiano" />
+            <Button mnemonicParsing="false" onAction="#onActionConjuntoDiferenca" prefHeight="72.0" prefWidth="334.0" text="Conjunto Diferença" />
+            <Button mnemonicParsing="false" onAction="#onProdutoCartesiano" prefHeight="72.0" prefWidth="334.0" text="Produto Cartesiano" />
          </children>
       </VBox>
-      <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltar" text="Voltar" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <Button layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltar" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                    <Image url="@/br/com/MCConjunto/view/image/back.png" />
+                </ImageView> 
+            </graphic>
+      </Button>
    </children>
 </AnchorPane>

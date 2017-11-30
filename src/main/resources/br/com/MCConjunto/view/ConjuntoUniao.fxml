@@ -7,13 +7,21 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 
 <AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.ConjuntoUniaoController">
     <stylesheets>
         <URL value="@/br/com/MCConjunto/view/estilo/estilo.css" />
     </stylesheets>
    <children>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltar" text="Voltar" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#onVoltar">
+            <graphic>
+                <ImageView fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" >
+                    <Image url="@/br/com/MCConjunto/view/image/back.png" />
+                </ImageView> 
+            </graphic>
+      </Button>
       <Button layoutX="186.0" layoutY="171.0" mnemonicParsing="false" onAction="#onActionConjuntoUniao" text="Gerar conjunto união" />
       <VBox layoutX="14.0" layoutY="57.0" prefHeight="105.0" prefWidth="301.0" spacing="2.0">
          <children>
