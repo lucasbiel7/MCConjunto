@@ -32,5 +32,6 @@
          <tooltip>
             <Tooltip text="Para adicionar mais de um elemento utilze ';'." />
          </tooltip></TextField>
+      <Button layoutX="419.0" layoutY="97.0" mnemonicParsing="false" onAction="#onActionRemover" text="Remover" />
    </children>
 </AnchorPane>

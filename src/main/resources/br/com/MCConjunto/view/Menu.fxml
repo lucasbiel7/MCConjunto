@@ -5,15 +5,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.MenuController">
+<AnchorPane id="AnchorPane" fx:id="apPrincipal" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.MCConjunto.control.MenuController">
    <children>
       <HBox alignment="CENTER" layoutX="360.0" layoutY="243.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="292.0" spacing="15.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#btAdicionarConjunto" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Adicionar Conjunto" />
-                  <Button mnemonicParsing="false" onAction="#btCarregarConjuntos" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Carregar conjuntos" />
+                  <Button mnemonicParsing="false" onAction="#btCarregarConjuntos" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Adicionar/Remover elementos" />
                   <Button mnemonicParsing="false" onAction="#btManipularConjuntos" prefHeight="44.0" prefWidth="314.0" styleClass="buttonMenu" text="Manipular conjuntos" />
                </children>
             </VBox>
