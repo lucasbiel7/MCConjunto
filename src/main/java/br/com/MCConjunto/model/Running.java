@@ -12,7 +12,7 @@ import javafx.stage.WindowEvent;
 
 /**
  *
- * @author lucas
+ * @author Lucas Gabriel
  */
 public class Running extends Application {
 
