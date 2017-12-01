@@ -4,7 +4,7 @@ Trabalho de Matemática computacional
 
 
 Trabalho criado em 
-- **JavaFX**
+- **JavaFX** :coffee:
 - **Maven**  
 
 Trabalho exigido no curso de ciência da computação pelo professor
