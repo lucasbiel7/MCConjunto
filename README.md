@@ -12,7 +12,7 @@ Trabalho exigido no curso de ciência da computação pelo professor
 
 ## Desenvolvedores
 
-> Lucas Gabriel de Souza Dutra
+> Lucas Gabriel de Souza Dutra :skull:
 
 > Bernardo
 
