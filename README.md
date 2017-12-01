@@ -14,13 +14,13 @@ Trabalho exigido no curso de ciência da computação pelo professor
 
 > Lucas Gabriel de Souza Dutra :skull:
 
-> Bernardo
+> Bernardo Jorge Faria Pereira :cow2:
 
-> Diego
+> Diego Soares Santos
 
-> Nicolas
+> Nicolas Oliveira Bagetto
 
-> Paulo
+> Paulo Henrique dos Santos
 
 ### Sobre projeto
 
